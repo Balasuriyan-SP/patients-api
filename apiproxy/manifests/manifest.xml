@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AssignMessage-SetResponseContent" version="SHA-512:6ffac13aa519926b24e217f45d03e5492062cf36e831a43fd1f0cea73051f091836e7f42a1b1262c14ebce5a5e26421419164e73c4a60587430f46f08d8fb16f"/>
+        <VersionInfo resourceName="AssignMessage-SetStatusCode" version="SHA-512:8ea6e41617fa7a9d59e00fd5d228dd264840234384adceb1c3ed0078b828eec8fbd097b6c1abd10c589566f7b534d53e3e04cee0fe3454dce68d8e5e4507b0fe"/>
+        <VersionInfo resourceName="AssignMessage-TargetPathSuffix" version="SHA-512:0ffe63bb8c9c0c7063a4821e04d4e4ad06aa4b2cf9c36d2a61d1d48dab1729d36bc8753b218c78e2ff9293b98227437fceae92c2a6cf0adfce592fa9e2924b92"/>
+        <VersionInfo resourceName="ExtractVariables-EnvHeader" version="SHA-512:2d022046b305d0d17f8416d937d17a66dba237075534d6c380188043a69c82ad3c4c9a371ccf06a29f7d1d1e0edcb7fac9a99dd2002eafd7390e23554ce88640"/>
+        <VersionInfo resourceName="FlowCallout-Authentication" version="SHA-512:036b02bd399136da9e825f88afa028c8fcfaea4338841667e8902545902be8bb623f0e07db1b5d8daa8806ba6180eaf249fc8ba7504da68aa1ffc0d8ff245ac9"/>
+        <VersionInfo resourceName="RaiseFault-ServiceCallout" version="SHA-512:eda18cdf0ba1179cd6e2d94ff9d3a5568ade7498cd13c3d51bd43e149774fa1b2b0f3868571de66f095e04c6dcd10cdbbf97b0595309d768a6aee0b972b9cc85"/>
+        <VersionInfo resourceName="ServiceCallout-Facts" version="SHA-512:47fd061a1f12b3817cf2a1d4af06fe1b2946801bdfbcdc74fd315cf5bd1a75bc5e7b8095add31e2bc3d440e98f8bf368cafb9d767e4b47c7f716ec2fecaf9d29"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="patients-api-v1" version="SHA-512:da9ec97d55fb61cf05653e6ce314bf7612a0d9b8aa61af7ff168fa29b9e8b428c68b3f5d14387cc1e37d81334c3c016e2141d4d9d230c226d5406dc293d35222"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="AddPatients" version="SHA-512:09c89d3d531f27557ae1a8f83eaa00015fb39e2be573474b4fc6dc381287772611cc5c71c0398e33d6c392d77d9176d796e1d68e4e75fcfe36fcb102597b3709"/>
+        <VersionInfo resourceName="GetPatients" version="SHA-512:0fb842763e5dc17bfd806b175b72193aab223b3f22efa3dfdc6d0a71c51ed04417787f5f46dc1a39a87637f9c2f06d51532b0c7631efbfc0526dd85f4317b7d1"/>
+        <VersionInfo resourceName="Mock-Target" version="SHA-512:1ed3b89b39c4dd185e5f0d952daecab9aeb20c9726ca5f13bf915f6fe5afeb8becfe8cee6cd74281b318c18c8b45423e7d9dade78057fa635d31b3c182a04d79"/>
+    </TargetEndpoints>
+</Manifest>

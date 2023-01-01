@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="patients-api-v1">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>FlowCallout-Authentication</Name>
+            </Step>
+            <Step>
+                <Name>ExtractVariables-EnvHeader</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="GetPatients">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>ServiceCallout-Facts</Name>
+                </Step>
+                <Step>
+                    <Name>AssignMessage-SetStatusCode</Name>
+                </Step>
+                <Step>
+                    <Name>RaiseFault-ServiceCallout</Name>
+                    <Condition>(api.http_status_code == 500)</Condition>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/get-patients") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="AddPatients">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/add-patients") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/patients-api</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="MockTarget">
+        <TargetEndpoint>Mock-Target</TargetEndpoint>
+        <Condition>(env Matches "mock")</Condition>
+    </RouteRule>
+    <RouteRule name="GetPatients">
+        <TargetEndpoint>GetPatients</TargetEndpoint>
+        <Condition>(proxy.pathsuffix MatchesPath "/get-patients")</Condition>
+    </RouteRule>
+    <RouteRule name="AddPatients">
+        <TargetEndpoint>AddPatients</TargetEndpoint>
+        <Condition>(proxy.pathsuffix MatchesPath "/add-patients")</Condition>
+    </RouteRule>
+</ProxyEndpoint>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="patients-api-v1">
+    <Basepaths>/v1/patients-api</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1671890095416</CreatedAt>
+    <CreatedBy>akhiladasari87@gmail.com</CreatedBy>
+    <Description>This API will get the details of the patients</Description>
+    <DisplayName>patients-api-v1</DisplayName>
+    <LastModifiedAt>1671954870011</LastModifiedAt>
+    <LastModifiedBy>akhiladasari87@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:527ab318e346c061547ebd10c90607cf2f5393fbf354a2ee5085652579ab1a8d0311e0e6f2aad07c4aad24e22780a9495a499c194da378517f5812e264b0e49d:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>AssignMessage-SetResponseContent</Policy>
+        <Policy>AssignMessage-SetStatusCode</Policy>
+        <Policy>AssignMessage-TargetPathSuffix</Policy>
+        <Policy>ExtractVariables-EnvHeader</Policy>
+        <Policy>FlowCallout-Authentication</Policy>
+        <Policy>RaiseFault-ServiceCallout</Policy>
+        <Policy>ServiceCallout-Facts</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>patients-api-v1</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>AddPatients</TargetEndpoint>
+        <TargetEndpoint>GetPatients</TargetEndpoint>
+        <TargetEndpoint>Mock-Target</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
